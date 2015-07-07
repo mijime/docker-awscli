@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.2
 
 RUN apk update && \
     apk add curl py-pip && \
