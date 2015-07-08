@@ -9,4 +9,8 @@ ADD freeze.pip /usr/local/src/freeze.pip
 
 RUN pip install --upgrade -r /usr/local/src/freeze.pip
 
-ENTRYPOINT [ "/bin/sh", "-c" ]
+ENTRYPOINT [ "/entrypoint.sh" ]
+
+ADD /entrypoint.sh /entrypoint.sh
+
+RUN chmod +x /entrypoint.sh
