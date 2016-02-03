@@ -5,9 +5,9 @@ RUN apk update && \
     pip install --upgrade pip && \
     rm -rf /var/cache/apk/*
 
-ADD freeze.pip /usr/local/src/freeze.pip
+ADD requirements.txt /usr/local/src/requirements.txt
 
-RUN pip install --upgrade -r /usr/local/src/freeze.pip
+RUN pip install --upgrade -r /usr/local/src/requirements.txt
 
 ENTRYPOINT [ "/entrypoint.sh" ]
 
